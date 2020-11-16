@@ -6,13 +6,12 @@
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <style>
       .message { font-size: 1.3em; font-weight: bold; };
-      #empty{
-        border: 1px;
-        border-color: red;
+      .empty{
+        border: 4px solid black;
+
       };
-      #con{
-        border: 1px;
-        border-color: green;
+      .con{
+        border: 4px solid green;
       };
     </style>
     <script type="text/javascript" src="angular.min.js">
@@ -34,8 +33,12 @@
              <button class="btn btn-default" ng-click="checkLunch()">Check If Too Much</button>
          </div>
          <div class="form-group message">
-          <p  class="text-danger border border-success" id="empty" > {{empty}}</p>
+           <div class="empty">
+          <p  class="text-danger border border-success"  > {{empty}}</p>
+          </div>
+          <div class="con">
           <p  class="text-success border border-success" id="con">{{con}} </p>
+         </div>
          </div>
    </div>
 
