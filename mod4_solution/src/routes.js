@@ -29,14 +29,14 @@
               }]
           }
       })
-      .state('itemMenu', {
-        url: '/item-menu/{shortName}',
-        templateUrl: 'src/menuapp/templates/items.html',
+      .state('items', {
+        url: '/items/{shortName}',
+        templateUrl: 'src/menuapp/templates/main-menu.html',
         controller: 'MenuItemsController as menuItems',
         resolve: {
           item: ['$stateParams', 'MenuDataService',function ($stateParams,MenuDataService){
-            console.log(MenuDataService.getMenuForCategory($stateParams.shortName));
-              return MenuDataService.getMenuForCategory($stateParams.shortName);
+            console.log(MenuDataService.getItemsForCategory($stateParams.shortName));
+              return MenuDataService.getItemsForCategory($stateParams.shortName);
             }]
          }
          });

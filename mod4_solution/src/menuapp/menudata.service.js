@@ -15,7 +15,7 @@
                       url:(ApiBasePath+'/categories.json')
                     });
             }
-            service.getMenuForCategory = function(shortName){
+            service.getItemsForCategory = function(shortName){
                     return $http({
                       method: "GET",
                       url: (ApiBasePath + "/menu_items.json"),

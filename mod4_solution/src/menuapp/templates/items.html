@@ -1,15 +1,6 @@
-<p>
-  <a ui-sref="home">Home</a> &lt;
-<a ui-sref="categories">Categories</a> 
-</p>
-<p>
-Name and ShortName:
-<span> {{ menuItems.name }} of {{menuItems.short_name}} </span>
-</p>
-
-<div>
-  <p>Description:</p>
-  {{menuItems.description}}
-</div>
-
-
+<ul>
+    <li ng-repeat="item in $ctrl.items">
+      {{item.short_name}} of {{item.name}}
+      <p>{{item.description}}</p>
+    </li>
+</ul>
